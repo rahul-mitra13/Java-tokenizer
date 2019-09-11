@@ -57,6 +57,13 @@ public class ScanIt {
                         i = i + 1;
                         String newstring = "";
                         while(line.charAt(i) != '"'){
+                            if ( line.charAt(i) == '\\' && line.charAt(i + 1) == '\\'){
+                                newstring += '\\';
+                                i = i + 2;
+                            }
+                            else if ( line.charAt(i) == '\\' && line.charAt(i + 1) == '"'){
+                                i = i + 1;
+                            }
                             newstring += line.charAt(i);
                             i++;
                         }
