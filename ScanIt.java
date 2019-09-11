@@ -14,7 +14,7 @@ public class ScanIt {
             int k = 1;//to store line number
             String line = br.readLine();
             while(line != null){
-                line = line + ' ' + ' ';
+                line = line + ' ';
                 int i = 0;
                 while( i < line.length()){
                     if ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_'){//handles identifiers
