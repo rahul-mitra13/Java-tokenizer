@@ -61,15 +61,18 @@ public class ScanIt {
                         i = i + 1;
                         String newstring = "";
                         while(line.charAt(i) != '"'){
-                            if ( line.charAt(i) == '\\' && line.charAt(i + 1) == '\\'){//if it's an escape character for '\'
+                            if (line.charAt(i) == '\\' && line.charAt(i + 1) == '\\'){//if it's an escape character for '\'
                                 newstring += '\\';
                                 i = i + 2;
                             }
                             else if ( line.charAt(i) == '\\' && line.charAt(i + 1) == '"'){//if it's an escape character for '"'
-                                i = i + 1;
+                                newstring += '"';
+                                i = i + 2;
                             }
+                            else{
                             newstring += line.charAt(i);
                             i++;
+                            }
                         }
                         System.out.println(k+": "+"string"+" '"+newstring+"' "+"found");
                         System.out.println();
