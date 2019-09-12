@@ -23,7 +23,7 @@ public class ScanIt {
                 while( i < line.length()){
                     if ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_'){//handles identifiers
                         String ident = "";
-                        while ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_'){
+                        while ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_' || Character.isDigit(line.charAt(i))){
                             ident += line.charAt(i);
                             i++;
                         }
@@ -90,8 +90,8 @@ public class ScanIt {
                 line = br.readLine();
             }
             br.close();
-        }//main
-    }//class
+        }//else
+    }//main
     /**
      * This function checks if a particular character is an operator
      * @param ch character to test
@@ -103,5 +103,5 @@ public class ScanIt {
         }
         else 
             return false;
-    }
-}
+    }//method
+}//class
