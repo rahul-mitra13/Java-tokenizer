@@ -32,7 +32,7 @@ public class ScanIt {
                     }
                     else if(Character.isDigit(line.charAt(i)) || (line.charAt(i) == '.' && Character.isDigit(line.charAt(i + 1)))){//handles integers and floats
                         String num = "";//both floats and integers
-                        int c = 0;
+                        int c = 0;//counting the number of decimal points
                         while ((Character.isDigit(line.charAt(i)) || line.charAt(i) == '.')){
                             if ( line.charAt(i) == '.'){
                                 c++;
