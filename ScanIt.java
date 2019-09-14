@@ -19,7 +19,7 @@ public class ScanIt {
             String line = br.readLine();
             while(line != null){
                 line = line + ' ';
-                int i = 0;
+                int i = 0;//iterating variable
                 while( i < line.length()){
                     if ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_'){//handles identifiers
                         String ident = "";
@@ -57,7 +57,7 @@ public class ScanIt {
                         System.out.println();
                         i++;
                     }
-                    else if (line.charAt(i) == '"'){//handle strings
+                    else if (line.charAt(i) == '"'){//handles strings
                         i = i + 1;
                         String newstring = "";
                         while(line.charAt(i) != '"'){
@@ -98,7 +98,7 @@ public class ScanIt {
      * @return true if character is an operator or false otherwise
      */
     public static boolean isOperator(char ch){
-        if(ch == '&' || ch == '=' || ch == '!' || ch == ':' || ch == ',' || ch == '.' || ch == '>' || ch == '<' || ch == '[' || ch == ']' || ch == '(' || ch == ')' || ch == '+' || ch == '-' || ch == '/' || ch == '*' || ch == ';') {
+        if(ch == '&' || ch == '=' || ch == '!' || ch == ':' || ch == ',' || ch == '.' || ch == '>' || ch == '<' || ch == '[' || ch == ']' || ch == '(' || ch == ')' || ch == '+' || ch == '-' || ch == '/' || ch == '*' || ch == ';'){
             return true;
         }
         else 
