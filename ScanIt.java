@@ -1,6 +1,7 @@
 /**
  * Rahul Mitra
  * CPSC316, Assignment 1 
+ * Fall 2019
  * A Simple Scanner
  */
 import java.io.*;
@@ -37,7 +38,7 @@ public class ScanIt {
                             if ( line.charAt(i) == '.'){
                                 c++;
                             }
-                            if ( c > 1){
+                            if ( c > 1){//if points is more than one, we can break
                                 break;
                             }
                             num += line.charAt(i);
@@ -87,7 +88,7 @@ public class ScanIt {
                     }
                 }
                 k++;//increment line number
-                line = br.readLine();
+                line = br.readLine();//read the next line
             }
             br.close();
         }//else
