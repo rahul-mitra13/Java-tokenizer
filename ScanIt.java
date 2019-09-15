@@ -10,7 +10,7 @@ public class ScanIt {
             System.out.println("No command line arguments were passed.");
             System.exit(0);
         }
-        else {
+        else {//if a file is passed in
             System.out.println();
             File file = new File(args[0]);
     
@@ -18,7 +18,7 @@ public class ScanIt {
             int k = 1;//to store line number
             String line = br.readLine();
             while(line != null){
-                line = line + ' ';
+                line = line + ' ';//to prevent out of Bounds exception at the end of the string
                 int i = 0;//iterating variable
                 while( i < line.length()){
                     if ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_'){//handles identifiers
