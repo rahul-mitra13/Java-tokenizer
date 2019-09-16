@@ -63,10 +63,12 @@ public class ScanIt {
                         String newstring = "";
                         while(line.charAt(i) != '"'){
                             if (line.charAt(i) == '\\' && line.charAt(i + 1) == '\\'){//if it's an escape character for '\'
+                                //add a backslash and skip
                                 newstring += '\\';
                                 i = i + 2;
                             }
                             else if ( line.charAt(i) == '\\' && line.charAt(i + 1) == '"'){//if it's an escape character for '"'
+                                //add a quotation mark and skip
                                 newstring += '"';
                                 i = i + 2;
                             }

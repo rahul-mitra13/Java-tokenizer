@@ -1,4 +1,4 @@
-"\H\\\\"
+"\H\\"
 B1.5
 i = i + 1@
 print("Hello, World.");
