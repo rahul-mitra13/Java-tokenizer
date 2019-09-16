@@ -19,7 +19,7 @@ public class ScanIt {
             int k = 1;//to store line number
             String line = br.readLine();
             while(line != null){
-                line = line + ' ';//to prevent out of Bounds exception at the end of the string
+                line = line + ' ';//to prevent out of bounds exception at the end of the string
                 int i = 0;//iterating variable
                 while( i < line.length()){
                     if ( Character.isLetter(line.charAt(i)) || line.charAt(i) == '_'){//handles identifiers
@@ -88,10 +88,10 @@ public class ScanIt {
                         }
                         i++;
                     }
-                }
+                }//inner while
                 k++;//increment line number
                 line = br.readLine();//read the next line
-            }
+            }//outer while
             br.close();
         }//else
     }//main
